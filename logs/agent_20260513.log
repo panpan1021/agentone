@@ -1,0 +1,113 @@
+2026-05-13 19:16:36,023 - agent - ERROR - file_handler.py:29 - [listdir_with_allowed_type]D:\python_projects\PythonProject3\ata不是文件夹
+2026-05-13 19:16:36,023 - agent - ERROR - file_handler.py:8 - [md5计算]文件txt不存在
+2026-05-13 19:16:36,023 - agent - ERROR - vector_store.py:99 - [加载知识库]txt加载失败：Error loading txt
+Traceback (most recent call last):
+  File "C:\Users\chang\AppData\Local\Programs\Python\Python311\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\python_projects\PythonProject3\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python_projects\PythonProject3\rag\vector_store.py", line 57, in get_file_documents
+    return text_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python_projects\PythonProject3\utils\file_handler.py", line 38, in text_loader
+    return TextLoader(filepath,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chang\AppData\Local\Programs\Python\Python311\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chang\AppData\Local\Programs\Python\Python311\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading txt
+2026-05-13 19:16:36,025 - agent - ERROR - file_handler.py:8 - [md5计算]文件pdf不存在
+2026-05-13 19:16:36,025 - agent - ERROR - vector_store.py:99 - [加载知识库]pdf加载失败：File path pdf is not a valid file or url
+Traceback (most recent call last):
+  File "D:\python_projects\PythonProject3\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python_projects\PythonProject3\rag\vector_store.py", line 60, in get_file_documents
+    return pdf_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python_projects\PythonProject3\utils\file_handler.py", line 36, in pdf_loader
+    return PyPDFLoader(filepath,passwd).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chang\AppData\Local\Programs\Python\Python311\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 281, in __init__
+    super().__init__(file_path, headers=headers)
+  File "C:\Users\chang\AppData\Local\Programs\Python\Python311\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 140, in __init__
+    raise ValueError("File path %s is not a valid file or url" % self.file_path)
+ValueError: File path pdf is not a valid file or url
+2026-05-13 19:42:47,085 - agent - ERROR - file_handler.py:29 - [listdir_with_allowed_type]D:\python_projects\PythonProject3\ata不是文件夹
+2026-05-13 19:42:47,085 - agent - ERROR - file_handler.py:8 - [md5计算]文件txt不存在
+2026-05-13 19:42:47,085 - agent - ERROR - vector_store.py:99 - [加载知识库]txt加载失败：Error loading txt
+Traceback (most recent call last):
+  File "C:\Users\chang\AppData\Local\Programs\Python\Python311\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\python_projects\PythonProject3\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python_projects\PythonProject3\rag\vector_store.py", line 57, in get_file_documents
+    return text_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python_projects\PythonProject3\utils\file_handler.py", line 38, in text_loader
+    return TextLoader(filepath,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chang\AppData\Local\Programs\Python\Python311\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chang\AppData\Local\Programs\Python\Python311\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading txt
+2026-05-13 19:42:47,087 - agent - ERROR - file_handler.py:8 - [md5计算]文件pdf不存在
+2026-05-13 19:42:47,087 - agent - ERROR - vector_store.py:99 - [加载知识库]pdf加载失败：File path pdf is not a valid file or url
+Traceback (most recent call last):
+  File "D:\python_projects\PythonProject3\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python_projects\PythonProject3\rag\vector_store.py", line 60, in get_file_documents
+    return pdf_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python_projects\PythonProject3\utils\file_handler.py", line 36, in pdf_loader
+    return PyPDFLoader(filepath,passwd).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chang\AppData\Local\Programs\Python\Python311\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 281, in __init__
+    super().__init__(file_path, headers=headers)
+  File "C:\Users\chang\AppData\Local\Programs\Python\Python311\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 140, in __init__
+    raise ValueError("File path %s is not a valid file or url" % self.file_path)
+ValueError: File path pdf is not a valid file or url
+2026-05-13 19:52:22,797 - agent - INFO - vector_store.py:96 - [加载知识库]D:\python_projects\PythonProject3\data\扫地机器人100问.pdf 内容加载成功
+2026-05-13 19:52:27,463 - agent - INFO - vector_store.py:96 - [加载知识库]D:\python_projects\PythonProject3\data\扫地机器人100问2.txt 内容加载成功
+2026-05-13 19:52:36,765 - agent - INFO - vector_store.py:96 - [加载知识库]D:\python_projects\PythonProject3\data\扫拖一体机器人100问.txt 内容加载成功
+2026-05-13 23:10:37,172 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型,带有1条信息
+2026-05-13 23:10:37,172 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage给我生成我的使用报告
+2026-05-13 23:10:39,140 - agent - INFO - middleware.py:19 - [tool monitor]执行工具:fill_context_for_report
+2026-05-13 23:10:39,141 - agent - INFO - middleware.py:20 - [tool monitor]传入参数:{}
+2026-05-13 23:10:39,141 - agent - INFO - middleware.py:23 - [tool monitor]工具fill_context_for_report调用成功
+2026-05-13 23:10:39,142 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型,带有3条信息
+2026-05-13 23:10:39,142 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessagefill_context_for_report已调用
+2026-05-13 23:10:40,787 - agent - INFO - middleware.py:19 - [tool monitor]执行工具:get_user_id
+2026-05-13 23:10:40,787 - agent - INFO - middleware.py:20 - [tool monitor]传入参数:{}
+2026-05-13 23:10:40,788 - agent - INFO - middleware.py:23 - [tool monitor]工具get_user_id调用成功
+2026-05-13 23:10:40,788 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型,带有5条信息
+2026-05-13 23:10:40,788 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage1010
+2026-05-13 23:10:41,999 - agent - INFO - middleware.py:19 - [tool monitor]执行工具:get_current_month
+2026-05-13 23:10:41,999 - agent - INFO - middleware.py:20 - [tool monitor]传入参数:{}
+2026-05-13 23:10:41,999 - agent - INFO - middleware.py:23 - [tool monitor]工具get_current_month调用成功
+2026-05-13 23:10:41,999 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型,带有7条信息
+2026-05-13 23:10:41,999 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage2025-02
+2026-05-13 23:10:44,770 - agent - INFO - middleware.py:19 - [tool monitor]执行工具:fetch_external_data
+2026-05-13 23:10:44,770 - agent - INFO - middleware.py:20 - [tool monitor]传入参数:{'user_id': '1010', 'month': '2025-02'}
+2026-05-13 23:10:44,780 - agent - INFO - middleware.py:23 - [tool monitor]工具fetch_external_data调用成功
+2026-05-13 23:10:44,780 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型,带有9条信息
+2026-05-13 23:10:44,780 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage{"特征": "130㎡四居 | 三代同堂 | 通体砖", "效率": "覆盖率:83%\\n手动辅助清扫:2次/天\\n定时清扫使用率:65%", "耗材": "电池衰减:16%\\n边刷寿命:剩余40天", "对比": "大户型中操作便捷性低于同类18%"}
