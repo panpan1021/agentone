@@ -1,7 +1,7 @@
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from utils.config_handler import chroma_config
-from model.factory import embedding_model
+from model.factory import get_embedding_model
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from utils.path_tool import get_abs_path
 from utils.file_handler import pdf_loader, text_loader, listdir_with_allowed_type, get_file_md5_hex
@@ -13,7 +13,7 @@ class VectorStoreService:
     def __init__(self):
         self.vector_store = Chroma(
             collection_name=chroma_config["collection_name"],
-            embedding_function=embedding_model,
+            embedding_function=get_embedding_model(),
             persist_directory=chroma_config["persist_directory"],
         )
 
@@ -113,5 +113,3 @@ if __name__ == '__main__':
     for r in res:
         print(r.page_content)
         print("-" * 20)
-
-

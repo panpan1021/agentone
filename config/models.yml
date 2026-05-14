@@ -1,0 +1,29 @@
+# 模型配置
+# 支持 provider: tongyi(通义千问), ollama(本地), openai
+models:
+  - name: "qwen3-max"
+    display_name: "通义千问-Max"
+    provider: tongyi
+    model_id: "qwen3-max"
+    description: "阿里云通义千问最强模型，综合能力强"
+
+  - name: "qwen3-plus"
+    display_name: "通义千问-Plus"
+    provider: tongyi
+    model_id: "qwen3-plus"
+    description: "阿里云通义千问，性价比之选"
+
+  - name: "deepseek-r1"
+    display_name: "DeepSeek R1 (Ollama)"
+    provider: ollama
+    model_id: "deepseek-r1:7b"
+    description: "本地部署 DeepSeek R1，无需联网，免费使用"
+
+  - name: "qwen2.5"
+    display_name: "Qwen2.5 (Ollama)"
+    provider: ollama
+    model_id: "qwen2.5:7b"
+    description: "本地部署通义千问2.5，无需联网"
+
+# 默认使用的模型
+default_model: "qwen3-max"
