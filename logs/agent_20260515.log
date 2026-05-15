@@ -1,0 +1,5 @@
+2026-05-15 10:49:20,802 - agent - INFO - factory.py:31 - [model]初始化模型: qwen3-max (provider=tongyi, model_id=qwen3-max)
+2026-05-15 10:49:22,180 - agent - INFO - factory.py:31 - [model]初始化模型: qwen3-max (provider=tongyi, model_id=qwen3-max)
+2026-05-15 10:49:22,836 - agent - INFO - factory.py:31 - [model]初始化模型: qwen3-max (provider=tongyi, model_id=qwen3-max)
+2026-05-15 10:54:55,609 - agent - INFO - factory.py:31 - [model]初始化模型: qwen3-max (provider=tongyi, model_id=qwen3-max)
+2026-05-15 10:54:55,621 - agent - INFO - factory.py:31 - [model]初始化模型: qwen3-max (provider=tongyi, model_id=qwen3-max)
